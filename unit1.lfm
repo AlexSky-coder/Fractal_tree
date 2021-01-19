@@ -1,0 +1,204 @@
+object Form1: TForm1
+  Left = 287
+  Height = 493
+  Top = 127
+  Width = 866
+  Caption = 'Фрактальное дерево (fractal tree)'
+  ClientHeight = 493
+  ClientWidth = 866
+  Color = clWhite
+  Font.CharSet = RUSSIAN_CHARSET
+  Font.Color = clBlack
+  Font.Height = -16
+  Font.Name = 'Segoe UI'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  OnCreate = FormCreate
+  OnResize = FormResize
+  Position = poDesktopCenter
+  LCLVersion = '2.0.10.0'
+  object PaintBox1: TPaintBox
+    Left = 240
+    Height = 493
+    Top = 0
+    Width = 626
+    Align = alClient
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 493
+    Top = 0
+    Width = 240
+    Align = alLeft
+    BevelColor = clNone
+    BevelOuter = bvSpace
+    BevelWidth = 5
+    ClientHeight = 493
+    ClientWidth = 240
+    TabOrder = 0
+    object Button1: TButton
+      Left = 5
+      Height = 39
+      Top = 5
+      Width = 230
+      Align = alTop
+      Caption = 'Обновить (Update)'
+      Default = True
+      OnClick = Button1Click
+      TabOrder = 0
+    end
+    object TrackBar1: TTrackBar
+      Left = 5
+      Height = 25
+      Hint = 'Recursion boundary'
+      Top = 65
+      Width = 230
+      Max = 15
+      Min = 1
+      OnChange = TrackBar1Change
+      Position = 10
+      Align = alTop
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+    end
+    object Label1: TLabel
+      Left = 5
+      Height = 21
+      Top = 44
+      Width = 230
+      Align = alTop
+      Caption = 'Граница рекурсии: 10'
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 5
+      Height = 21
+      Top = 90
+      Width = 230
+      Align = alTop
+      Caption = 'Угол: 15'
+      ParentColor = False
+    end
+    object TrackBar2: TTrackBar
+      Left = 5
+      Height = 25
+      Hint = 'Angle'
+      Top = 111
+      Width = 230
+      Frequency = 10
+      Max = 360
+      Min = 1
+      OnChange = TrackBar2Change
+      Position = 15
+      Align = alTop
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+    end
+    object CheckBox1: TCheckBox
+      Left = 5
+      Height = 25
+      Top = 136
+      Width = 230
+      Align = alTop
+      Caption = 'Рандомный угол: 1'
+      TabOrder = 3
+    end
+    object TrackBar3: TTrackBar
+      Left = 5
+      Height = 25
+      Hint = 'random angle'
+      Top = 161
+      Width = 230
+      Frequency = 5
+      Max = 180
+      Min = 1
+      OnChange = TrackBar3Change
+      Position = 1
+      Align = alTop
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 4
+    end
+    object CheckBox2: TCheckBox
+      Left = 5
+      Height = 25
+      Hint = 'random branch length'
+      Top = 186
+      Width = 230
+      Align = alTop
+      Caption = 'Рандомная длинна ствола'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 5
+    end
+    object CheckBox3: TCheckBox
+      Left = 5
+      Height = 25
+      Hint = 'branch thickness'
+      Top = 211
+      Width = 230
+      Align = alTop
+      Caption = 'Толщина ствола'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 6
+    end
+    object CheckBox5: TCheckBox
+      Left = 5
+      Height = 25
+      Top = 257
+      Width = 230
+      Align = alTop
+      Caption = 'Анимации (Animation)'
+      OnChange = CheckBox5Change
+      TabOrder = 7
+    end
+    object Label3: TLabel
+      Left = 5
+      Height = 21
+      Top = 236
+      Width = 230
+      Align = alTop
+      Alignment = taCenter
+      Caption = 'Animation'
+      ParentColor = False
+    end
+    object RadioButton1: TRadioButton
+      Left = 5
+      Height = 25
+      Top = 282
+      Width = 230
+      Align = alTop
+      Caption = 'Ветер (wind)'
+      Checked = True
+      TabOrder = 8
+      TabStop = True
+    end
+    object Button2: TButton
+      Left = 5
+      Height = 25
+      Top = 463
+      Width = 230
+      Align = alBottom
+      Caption = 'Копировать в буффер'
+      OnClick = Button2Click
+      TabOrder = 9
+    end
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 25
+    OnTimer = Timer1Timer
+    Left = 392
+    Top = 128
+  end
+end
