@@ -73,7 +73,7 @@ begin
  else r:=0;
  p:=((pi*2)/360)*(ppp+r);
  //случайная длина
- if form1.CheckBox2.Checked then r:=random(150)/100 else r:=1;
+ if CheckBox2.Checked then r:=random(150)/100 else r:=1;
 
  inc(j);
  m[j].g:=g;
@@ -81,7 +81,7 @@ begin
  xx:=round(x+cos(m[j].g)*m[j].d);
  yy:=round(y+sin(m[j].g)*m[j].d);
 
- if form1.CheckBox3.Checked then
+ if CheckBox3.Checked then
  b.Canvas.Pen.Width:=i;
 
  b.Canvas.MoveTo(round(x),round(y));
@@ -102,7 +102,7 @@ inc(j);
  xx:=round(x+cos(m[j].g+v)*m[j].d);
  yy:=round(y+sin(m[j].g+v)*m[j].d);
 
- if form1.CheckBox3.Checked then
+ if CheckBox3.Checked then
  b.Canvas.Pen.Width:=i;
 
  b.Canvas.MoveTo(x,y);
