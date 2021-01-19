@@ -68,8 +68,8 @@ var xx,yy:integer;
     r:extended;
 begin
  //случайный угол
- if form1.CheckBox1.Checked then
- r:=(random(form1.TrackBar3.Position*2)-form1.TrackBar3.Position)
+ if CheckBox1.Checked then
+ r:=(random(TrackBar3.Position*2)-TrackBar3.Position)
  else r:=0;
  p:=((pi*2)/360)*(ppp+r);
  //случайная длина
